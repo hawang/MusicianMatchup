@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @band.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @band.description %>
+</p>
+
+<p>
+  <b>Lookfor ints:</b>
+  <%=h @band.lookfor_ints %>
+</p>
+
+<p>
+  <b>Lookfor gender:</b>
+  <%=h @band.lookfor_gender %>
+</p>
+
+
+<%= link_to 'Edit', edit_band_path(@band) %> |
+<%= link_to 'Back', bands_path %>

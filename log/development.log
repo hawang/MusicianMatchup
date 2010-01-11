@@ -1,0 +1,260 @@
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (37.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (33.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMusicians (20100111155601)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "musicians" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "instrument" varchar(255), "age" integer, "gender" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100111155601')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("musicians")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMusicians (20100111155601)
+Migrating to CreateBands (20100111160449)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "bands" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "lookfor_ints" varchar(255), "lookfor_gender" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100111160449')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("bands")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("musicians")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 10:37:40) [GET]
+
+ActionController::RoutingError (No route matches "/musician" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-11 10:38:09) [GET]
+
+ActionController::RoutingError (No route matches "/musician/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MusiciansController#index (for 127.0.0.1 at 2010-01-11 10:38:55) [GET]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `validate_presence_of' for #<Class:0x47224d8>):
+  app/models/musician.rb:2
+  app/controllers/musicians_controller.rb:5:in `index'
+
+Rendered rescues/_trace (87.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MusiciansController#show (for 127.0.0.1 at 2010-01-11 10:39:15) [GET]
+  Parameters: {"id"=>"edit"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `validate_presence_of' for #<Class:0x62fda40>):
+  app/models/musician.rb:2
+  app/controllers/musicians_controller.rb:16:in `show'
+
+Rendered rescues/_trace (121.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MusiciansController#new (for 127.0.0.1 at 2010-01-11 10:39:58) [GET]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `validate_presence_of' for #<Class:0x63cb1c0>):
+  app/models/musician.rb:2
+  app/controllers/musicians_controller.rb:27:in `new'
+
+Rendered rescues/_trace (60.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMusicians (20100111155601)
+Migrating to CreateBands (20100111160449)
+Migrating to AddTestData (20100111174742)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMusicians (20100111155601)
+Migrating to CreateBands (20100111160449)
+Migrating to AddTestData (20100111174742)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mMusician Delete all (1.0ms)[0m   [0mDELETE FROM "musicians" WHERE 1=1[0m
+  [4;36;1mBand Delete all (0.0ms)[0m   [0;1mDELETE FROM "bands" WHERE 1=1[0m
+  [4;35;1mBand Load (0.0ms)[0m   [0mSELECT "bands".id FROM "bands" WHERE ("bands"."description" = '<p>we love to rock</p>') LIMIT 1[0m
+  [4;36;1mBand Create (1.0ms)[0m   [0;1mINSERT INTO "bands" ("name", "updated_at", "lookfor_ints", "lookfor_gender", "description", "created_at") VALUES('The Kinks', '2010-01-11 18:25:45', 'trumpet', 'male', '<p>we love to rock</p>', '2010-01-11 18:25:45')[0m
+  [4;35;1mBand Load (0.0ms)[0m   [0mSELECT "bands".id FROM "bands" WHERE ("bands"."description" = '<p>we love reggae</p>') LIMIT 1[0m
+  [4;36;1mBand Create (0.0ms)[0m   [0;1mINSERT INTO "bands" ("name", "updated_at", "lookfor_ints", "lookfor_gender", "description", "created_at") VALUES('Sublime', '2010-01-11 18:25:45', 'trumpet', 'female', '<p>we love reggae</p>', '2010-01-11 18:25:45')[0m
+  [4;35;1mBand Load (0.0ms)[0m   [0mSELECT "bands".id FROM "bands" WHERE ("bands"."description" = '<p>hail Denver!</p>') LIMIT 1[0m
+  [4;36;1mBand Create (0.0ms)[0m   [0;1mINSERT INTO "bands" ("name", "updated_at", "lookfor_ints", "lookfor_gender", "description", "created_at") VALUES('Flobots', '2010-01-11 18:25:45', 'banjo', 'male', '<p>hail Denver!</p>', '2010-01-11 18:25:45')[0m
+  [4;35;1mBand Load (0.0ms)[0m   [0mSELECT "bands".id FROM "bands" WHERE ("bands"."description" = '<p>chir lir lir</p>') LIMIT 1[0m
+  [4;36;1mBand Create (0.0ms)[0m   [0;1mINSERT INTO "bands" ("name", "updated_at", "lookfor_ints", "lookfor_gender", "description", "created_at") VALUES('Kargyraa Moaners', '2010-01-11 18:25:45', 'doshpulur', 'male', '<p>chir lir lir</p>', '2010-01-11 18:25:45')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100111174742')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bands")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("musicians")[0m
+
+
+Processing MusiciansController#index (for 127.0.0.1 at 2010-01-11 11:26:08) [GET]
+  [4;36;1mMusician Load (0.0ms)[0m   [0;1mSELECT * FROM "musicians" [0m
+Rendering template within layouts/musicians
+Rendering musicians/index
+Completed in 289ms (View: 283, DB: 0) | 200 OK [http://localhost/musicians/]
+
+
+Processing MusiciansController#index (for 127.0.0.1 at 2010-01-11 11:26:25) [GET]
+  [4;35;1mMusician Load (0.0ms)[0m   [0mSELECT * FROM "musicians" [0m
+Rendering template within layouts/musicians
+Rendering musicians/index
+Completed in 62ms (View: 2, DB: 0) | 200 OK [http://localhost/musicians/]
+
+
+Processing MusiciansController#new (for 127.0.0.1 at 2010-01-11 11:26:32) [GET]
+Rendering template within layouts/musicians
+Rendering musicians/new
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/musicians/new]
+
+
+Processing MusiciansController#index (for 127.0.0.1 at 2010-01-11 11:26:43) [GET]
+  [4;36;1mMusician Load (0.0ms)[0m   [0;1mSELECT * FROM "musicians" [0m
+Rendering template within layouts/musicians
+Rendering musicians/index
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/musicians/]
+
+
+Processing MusiciansController#index (for 127.0.0.1 at 2010-01-11 11:33:49) [GET]
+  [4;35;1mMusician Load (0.0ms)[0m   [0mSELECT * FROM "musicians" [0m
+Rendering template within layouts/musicians
+Rendering musicians/index
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/musicians/]
+
+
+Processing BandsController#index (for 127.0.0.1 at 2010-01-11 11:38:49) [GET]
+  [4;36;1mBand Load (1.0ms)[0m   [0;1mSELECT * FROM "bands" [0m
+Rendering template within layouts/bands
+Rendering bands/index
+Completed in 36ms (View: 30, DB: 1) | 200 OK [http://localhost/bands/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMusicians (20100111155601)
+Migrating to CreateBands (20100111160449)
+Migrating to AddTestData (20100111174742)
+Migrating to AddTestMusic (20100111184035)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mMusician Delete all (0.0ms)[0m   [0mDELETE FROM "musicians" WHERE 1=1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100111184035')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bands")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("musicians")[0m
+
+
+Processing MusiciansController#index (for 127.0.0.1 at 2010-01-11 11:43:40) [GET]
+  [4;35;1mMusician Load (1.0ms)[0m   [0mSELECT * FROM "musicians" [0m
+Rendering template within layouts/musicians
+Rendering musicians/index
+Completed in 8ms (View: 2, DB: 1) | 200 OK [http://localhost/musicians/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMusicians (20100111155601)
+Migrating to CreateBands (20100111160449)
+Migrating to AddTestData (20100111174742)
+Migrating to AddTestMusic (20100111184035)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bands")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("musicians")[0m

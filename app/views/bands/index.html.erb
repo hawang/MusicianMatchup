@@ -1,0 +1,26 @@
+<h1>Listing bands</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Lookfor ints</th>
+    <th>Lookfor gender</th>
+  </tr>
+
+<% @bands.each do |band| %>
+  <tr>
+    <td><%=h band.name %></td>
+    <td><%=h band.description %></td>
+    <td><%=h band.lookfor_ints %></td>
+    <td><%=h band.lookfor_gender %></td>
+    <td><%= link_to 'Show', band %></td>
+    <td><%= link_to 'Edit', edit_band_path(band) %></td>
+    <td><%= link_to 'Destroy', band, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New band', new_band_path %>

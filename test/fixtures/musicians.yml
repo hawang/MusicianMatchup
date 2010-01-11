@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  instrument: MyString
+  age: 1
+  gender: MyString
+
+two:
+  name: MyString
+  instrument: MyString
+  age: 1
+  gender: MyString
