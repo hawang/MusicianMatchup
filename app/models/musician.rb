@@ -4,7 +4,7 @@ class Musician < ActiveRecord::Base
   
   protected
   def correct_gender
-    errors.add(:gender, 'gender should be either male or female') if gender.downcase != "male" || gender.downcase !="female"
+    errors.add(:gender, 'gender should be either male or female') if gender.downcase != "male" && gender.downcase !="female"
   end
   
   def correct_age
